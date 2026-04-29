@@ -31,7 +31,7 @@ keywords:
 |设备|服务类型|配置|
 |---|---|---|
 |百度服务器|HTTPServer|启用HTTP服务，根目录：C:\Test|
-|DNS服务器|DNSServer|www.baidu.com→192.168.1.2|
+|DNS服务器|DNSServer|`www.baidu.com` → `192.168.1.2`|
 
 
 
