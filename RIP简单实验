@@ -1,0 +1,94 @@
+---
+title: RIP简单实验
+date: 2026-04-29
+tags:
+  - 实训
+  - 运维
+keywords:
+  - RIP
+---
+
+
+# 🖥️拓扑设计
+
+# ⚙️配置说明
+
+## 1️⃣基础配置：
+
+R1：
+```
+  system-view
+  undo info enable
+  sysname R1
+
+  int g0/0/0
+  ip add 192.168.1.254 24
+  int g0/0/1
+  ip add 12.1.1.1 24
+```
+
+
+R2
+```
+  system-view
+  undo info enable
+  sysname R2
+
+  int g0/0/0
+  ip add 12.1.1.2 24
+  int g0/0/1
+  ip add 23.1.1.2 24
+```
+
+
+R3
+```
+  system-view
+  undo info enable
+  sysname R3
+
+  int g0/0/0
+  ip add 23.1.1.3 24
+  int g0/0/1
+  ip add 192.168.2.254 24
+```
+
+
+
+## 2️⃣RIP宣告
+
+R1
+```
+  q
+  rip 1
+  version 2
+  network 192.168.1.0
+  network 12.0.0.0
+```
+
+
+
+R2
+```
+  q
+  rip 1
+  version 2
+  network 12.0.0.0
+  network 23.0.0.0
+```
+
+
+R3
+```
+  q
+  rip 1
+  version 2
+  network 23.0.0.0
+  network 192.168.2.0
+```
+
+# 🔎测试与验证
+
+
+
+
