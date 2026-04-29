@@ -17,7 +17,7 @@ keywords:
 
 # ⚙️ 配置说明
 
-- 基础网络配置
+- 1️⃣基础网络配置
 
 |设备|IP|DNS|
 |---|---|---|
@@ -26,7 +26,7 @@ keywords:
 |DNS服务器|192.168.1.3|-|
 
 
-- 服务器功能配置
+- 2️⃣服务器功能配置
 
 |设备|服务类型|配置|
 |---|---|---|
@@ -35,9 +35,17 @@ keywords:
 
 
 
+
 # 🔎测试与验证
-客户端于HttpClient获取www.baidu.com
+客户端访问域名 `www.baidu.com`，通过 HttpClient 发起请求：
 <img width="1101" height="764" alt="20264292" src="https://github.com/user-attachments/assets/332a6047-c4dc-4575-8b66-2831cce5d89d" />
+
+## ✔ 验证逻辑
+
+- 客户端输入域名：www.baidu.com
+- DNS服务器解析域名 → 192.168.1.2
+- 客户端访问HTTP服务器
+- 返回网页内容成功
 
 
 
